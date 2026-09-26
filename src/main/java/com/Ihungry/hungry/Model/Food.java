@@ -1,9 +1,13 @@
 package com.Ihungry.hungry.Model;
+
+import com.Ihungry.hungry.Repository.FoodRequestDTO;
+
 import jakarta.annotation.Generated;
 import jakarta.persistence.*;
 import lombok.*;
-@Table(name="food")
-@Entity(name = "food") 
+
+@Table(name = "food")
+@Entity(name = "food")
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
@@ -18,5 +22,10 @@ public class Food {
     private String category;
     private String foodImage;
 
+    public Food(FoodRequestDTO data) {
+        this.foodName = data.title();
+        this.foodDescription = data.description();
+        this.foodPrice = data.price();
         
+    }
 }
