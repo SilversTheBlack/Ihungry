@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.Ihungry.hungry.Repository.FoodRequestDTO;
 import com.Ihungry.hungry.Repository.FoodResponseDTO;
-import com.Ihungry.hungry.Repository.foodRepository;
+import com.Ihungry.hungry.Repository.FoodRepository;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -26,7 +26,7 @@ public class FoodController {
         // Constructor implementation
     }
 
-    private foodRepository repository;
+    private FoodRepository repository;
 
     @GetMapping
     public List<FoodResponseDTO> getAllFood() {
